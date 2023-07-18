@@ -41,4 +41,4 @@ With average score of : 30.09
 
 
 
-The goal is to find perfect hyperparameters of the algorithms to have the best performance. Also need to explore different DRL algorithms.
+The goal is to find perfect hyperparameters of the algorithms to have the best performance. Also need to explore different DRL algorithms which can solve the continuous control task.
