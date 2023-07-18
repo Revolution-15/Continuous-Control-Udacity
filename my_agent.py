@@ -3,7 +3,7 @@ import random
 import copy
 from collections import namedtuple, deque
 
-from model_pendulum import Actor, Critic
+from my_model import Actor, Critic
 
 import torch
 import torch.nn.functional as F
