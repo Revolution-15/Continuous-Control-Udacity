@@ -7,30 +7,38 @@ The Udacity provided DDPG code in PyTorch was used and adapted for this single a
 
 The algorithm uses two deep neural networks (actor-critic) with the following struture:
 - Actor    
-    - Hidden: (input, 256)  - ReLU
-    - Hidden: (256, 128)    - ReLU
+    - Hidden: (input, 128)  - ReLU
+    - Hidden: (128, 128)    - ReLU
     - Output: (128, 4)      - TanH
 
 - Critic
-    - Hidden: (input, 256)              - ReLU
-    - Hidden: (256 + action_size, 128)  - ReLU
+    - Hidden: (input, 128)              - ReLU
+    - Hidden: (128+action_size, 128)    - ReLU
     - Output: (128, 1)                  - Linear
 
 
 ### Hyperparameters
+- number of episodes = 500
+- timesteps per episode = 1000
+- epsilon = 1.0 at starting
+- min value of epsilon = 0.01
+- epsilon decay = 0.995
 - Learning Rate: 1e-4 (in both DNN)
-- Batch Size: 128
+- Batch Size: 1024
 - Replay Buffer: 1e5
-- Gamma: 0.99
+- Gamma: 0.85
 - Tau: 1e-3
 - Noise parameters (0.15 theta and 0.2 sigma.)
 
 
 ## Results and Future Work
-The actual model got really impressive results.
+Environment solved in 344 episodes!! 
+With average score of : 30.09
 
 
-<img src="result.png" width="400" height="260" />
+
+
+
 
 
 The goal is to find perfect hyperparameters of the algorithms to have the best performance.
