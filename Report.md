@@ -36,7 +36,7 @@ Environment solved in 344 episodes!!
 With average score of : 30.09
 
 
-
+![Training logs](continuous_control.png)
 
 
 
