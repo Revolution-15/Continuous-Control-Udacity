@@ -35,8 +35,9 @@ The algorithm uses two deep neural networks (actor-critic) with the following st
 Environment solved in 344 episodes!! 
 With average score of : 30.09
 
+<img src="continuous_control.png" width="400" height="260" />
 
-!(continuous_control.png)
+
 
 
 
