@@ -40,34 +40,13 @@ Udacity Deep Reinforcement Learning Nanodegree Program - Reacher Continuous Cont
 
 
 ## The solution:
-- For this problem I used an implementation of the Deep Deterministic Policy Gradients algorithm.
-- This task brought two big challenges for me: hyperparameters tunning and noise range configuration. After I found the right configuration for these two points the solution worked impressively well. I must say that the noise range configuration is the key for this task. As the action is a continuous value, dealing with noise correctly means more generalization and makes the agent convergence faster and more robust. The other hyperparameters increase the convergence speed but almost never prevent the agent from finding the solution whereas the wrong noise range configuration can easily make the agent unstable and, I risk saying, impossible to converge.
-- Another thing to highlight here is how great the approach used in actor critic structures in general is. It really takes the good part of both worlds, value based methods and policy gradient methods, and makes them work together in an impressive way. Especially in this task, the way the actor and critic learn together sharing their experiences really brought to my eyes a revolutionary point of view about how to build machine learning algorithms. It's really worth to take a look.
-- For the future, although the actual solution seems pretty good to me, I stil want to check this task with the D4PG algorithm and discover when and where each of the algorithms (DDPG vs. D4PG) have the best performance.
+- DDPG has been used for this project.
+- Hyperparameter tuning is the main urdle in this project where you have to find the right configuration for the project.
+- For the future, I am planning to implement the algorithms apart from DDPG.
 
+- TO implement the code in the repository follow the instructions below :
 
-### The hyperparameters:
-- The file with the hyperparameters configuration is the <b>main.py</b>. 
-- If you want you can change the model configuration to into the <b>model.py</b> file.
-- The actual configuration of the hyperparameters is: 
-  - Learning Rate: 1e-4 (in both DNN)
-  - Batch Size: 128
-  - Replay Buffer: 1e5
-  - Gamma: 0.99
-  - Tau: 1e-3
-  - Ornstein-Uhlenbeck noise parameters (0.15 theta and 0.2 sigma.)
-
-- For the neural models:    
-  - Actor    
-    - Hidden: (input, 256)  - ReLU
-    - Hidden: (256, 128)    - ReLU
-    - Output: (128, 4)      - TanH
-
-  - Critic
-    - Hidden: (input, 256)              - ReLU
-    - Hidden: (256 + action_size, 128)  - ReLU
-    - Output: (128, 1)                  - Linear
-
+  
 Run continuous_control.ipynb file.
 
 my_model.py contains the actor and critic networks.
