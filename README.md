@@ -8,10 +8,9 @@ Udacity Deep Reinforcement Learning Nanodegree Program - Reacher Continuous Cont
 
 
 ### Observations:
-- To run the project just execute the <b>main.py</b> file.
-- There is also an .ipynb file for jupyter notebook execution.
-- If you are not using a windows environment, you will need to download the corresponding <b>"Reacher"</b> version for you OS system. Mail me if you need more details about the environment <b>.exe</b> file.
-- The <b>checkpoint.pth</b> has the expected average score already hit.
+- Action space has the size of 4.
+- State space has the length of 33.
+- Number of agents is 1.
 
 
 ### Requeriments:
